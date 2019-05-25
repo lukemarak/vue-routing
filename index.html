@@ -10,30 +10,11 @@
 <div id="app">
 	<h1>Hello App!</h1>
 	<p>
-	<router-link to="/page1">Go to page1</router-link>
-	<router-link to="/page2">Go to page2</router-link>
+	<router-link to="/p3for999">3 for 999</router-link>
+	<router-link to="/p2for999">2 for 999</router-link>
 	</p>
 	<router-view></router-view>
 </div>
-
-<script>
-const page1 = { template: '<div>page1</div>'}
-const page2 = { template: '<div>page2</div>'}
-
-const routes = [
-	{ path: '/page1', component: page1},
-	{ path: '/page2', component: page2}
-]
-
-const router = new VueRouter({
-	routes
-	})
-
-const app = new Vue({
-	router
-	}).$mount('#app')
-
-</script>
-
+<script src="route.js"></script>
 </body>
 <html>
