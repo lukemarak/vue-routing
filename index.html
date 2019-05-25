@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>vue-routing</title>
+<meta CHARSET="UTF-8">
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+	<h1>Hello App!</h1>
+	<p>
+	<router-link to="/page1">Go to page1</router-link>
+	<router-link to="/page2">Go to page2</router-link>
+	</p>
+	<router-view></router-view>
+</div>
+
+<script>
+const page1 = { template: '<div>page1</div>'}
+const page2 = { template: '<div>page2</div>'}
+
+const routes = [
+	{ path: '/page1', component: page1},
+	{ path: '/page2', component: page2}
+]
+
+const router = new VueRouter({
+	routes
+	})
+
+const app = new Vue({
+	router
+	}).$mount('#app')
+
+</script>
+
+</body>
+<html>
